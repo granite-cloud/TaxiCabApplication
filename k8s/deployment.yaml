@@ -10,6 +10,8 @@ spec:
         app: taxicab
         version: "BUILD_NUMBER"
     spec:
+      serviceAccountName: my-serviceaccount
+      automountServiceAccountToken: false
       containers:
       - name: taxicab-ENVIRONMENT-BUILD_NUMBER
         image: IMAGE

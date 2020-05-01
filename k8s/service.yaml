@@ -2,21 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-access-log-emit-interval: "5"
-    service.beta.kubernetes.io/aws-load-balancer-access-log-enabled: "true"
-    service.beta.kubernetes.io/aws-load-balancer-access-log-s3-bucket-name: k8sdemo-elb-access-logs
-    service.beta.kubernetes.io/aws-load-balancer-access-log-s3-bucket-prefix: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
-    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
-    service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: "Environment=ENVIRONMENT"
-
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+    alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=30,access_logs.s3.enabled=true,access_logs.s3.bucket=k8sdemo-elb-access-logs,access_logs.s3.bucket.prefix=taxicab-ENVIRONMENT-svc-BUILD_NUMBER
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/backend-protocol: http
+    alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
   name: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
   namespace: default
-spec:
-  type: LoadBalancer
-  ports:
-    - port: 80
-      targetPort: 8080
-      name: http
   selector:
     app: taxicab
     version: "BUILD_NUMBER"

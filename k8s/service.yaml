@@ -1,9 +1,5 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
-spec:
-  selector:
-    app: taxicab
-    version: "BUILD_NUMBER"
 metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing

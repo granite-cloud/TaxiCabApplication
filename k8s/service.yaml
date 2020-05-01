@@ -10,3 +10,12 @@ metadata:
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
   name: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
   namespace: default
+  spec:
+  rules:
+    - host: taxi.granite-cloud.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
+              servicePort: 8080

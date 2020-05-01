@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: taxicab
+        app: taxicab-ENVIRONMENT-BUILD_NUMBER
         version: "BUILD_NUMBER"
     spec:
       serviceAccountName: my-serviceaccount

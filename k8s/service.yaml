@@ -1,5 +1,9 @@
 apiVersion: v1
 kind: Service
+spec:
+  selector:
+    app: taxicab
+    version: "BUILD_NUMBER"
 metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -10,7 +14,3 @@ metadata:
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
   name: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
   namespace: default
-  spec:
-    selector:
-      app: taxicab
-      version: "BUILD_NUMBER"

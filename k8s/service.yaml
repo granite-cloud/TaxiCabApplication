@@ -10,6 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
   name: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
   namespace: default
-  selector:
-    app: taxicab
-    version: "BUILD_NUMBER"
+  spec:
+    selector:
+      app: taxicab
+      version: "BUILD_NUMBER"

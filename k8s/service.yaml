@@ -11,11 +11,11 @@ metadata:
   name: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
   namespace: default
   spec:
-  rules:
-    - host: taxi.granite-cloud.org
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
-              servicePort: 8080
+    rules:
+      - host: taxi.granite-cloud.org
+        http:
+          paths:
+            - path: /
+              backend:
+                serviceName: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
+                servicePort: 8080

@@ -20,4 +20,4 @@ spec:
           - path: /
             backend:
               serviceName: taxicab-ENVIRONMENT-BUILD_NUMBER
-              servicePort: 8080
+              servicePort: 80

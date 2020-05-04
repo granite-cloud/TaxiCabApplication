@@ -13,8 +13,8 @@ spec:
         app: taxicab
         version: "BUILD_NUMBER"
     spec:
-      serviceAccountName: my-serviceaccount
-      automountServiceAccountToken: true
+      #serviceAccountName: my-serviceaccount
+      #automountServiceAccountToken: true
       containers:
       - name: taxicab-ENVIRONMENT-BUILD_NUMBER
         image: IMAGE

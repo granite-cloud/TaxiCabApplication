@@ -4,7 +4,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
-    alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=30,access_logs.s3.enabled=true,access_logs.s3.bucket=k8sdemo-elb-access-logs,access_logs.s3.bucket.prefix=taxicab-ENVIRONMENT-svc-BUILD_NUMBER
+    alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=30
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/backend-protocol: http
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"

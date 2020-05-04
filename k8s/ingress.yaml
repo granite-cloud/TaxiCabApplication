@@ -6,7 +6,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
     alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=30
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/backend-protocol: http
+    alb.ingress.kubernetes.io/backend-protocol: HTTP
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: ip 

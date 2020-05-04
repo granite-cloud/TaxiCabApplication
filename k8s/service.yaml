@@ -9,6 +9,7 @@ metadata:
     alb.ingress.kubernetes.io/backend-protocol: http
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
     kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip 
   name: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
   namespace: default
 spec:

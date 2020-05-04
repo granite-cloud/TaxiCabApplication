@@ -14,18 +14,10 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: blue.granite-cloud.org
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: PROD_BLUE_SERVICE
-              servicePort: 8080
-    
     - host: green.granite-cloud.org
       http:
         paths:
           - path: /
             backend:
-              serviceName: taxicab-ENVIRONMENT-svc-BUILD_NUMBER
+              serviceName: taxicab-ENVIRONMENT-BUILD_NUMBER
               servicePort: 8080

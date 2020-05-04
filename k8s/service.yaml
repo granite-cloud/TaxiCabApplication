@@ -12,7 +12,15 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: taxi.granite-cloud.org
+    - host: blue.granite-cloud.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: PROD_BLUE_SERVICE
+              servicePort: 8080
+    
+    - host: green.granite-cloud.org
       http:
         paths:
           - path: /

@@ -18,6 +18,10 @@ spec:
       containers:
       - name: taxicab-ENVIRONMENT-BUILD_NUMBER
         image: IMAGE
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

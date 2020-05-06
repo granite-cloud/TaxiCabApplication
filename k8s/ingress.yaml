@@ -10,6 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/tags: "Environment=ENVIRONMENT"
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: ip 
+    alb.ingress.kubernetes.io/success-codes: '401'  # health check via swagger requires auth which is no supported in alb checks, hence this hack for testing
   name: taxicab-ENVIRONMENT-BUILD_NUMBER
   namespace: default
 spec:

@@ -15,10 +15,9 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: green.granite-cloud.org
       http:
         paths:
-          - path: /
+          - path: /*
             backend:
               serviceName: taxicab-ENVIRONMENT-BUILD_NUMBER
               servicePort: 80
